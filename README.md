@@ -18,18 +18,24 @@ The picture is an AI-generated Vice City neon-sunset scene with make.fun's ghost
 
 A second variant (`meme-v2.png`) plays the PC angle: console players are in Vice City while PC players wait — no PC version announced, only rumoured for 2027.
 
+Round 2 replaces the picture with a sharper joke (`meme-v3.png`): a split-screen CONSOLE vs PC. Left panel, console players are already in Vice City — the ghost (from the press kit, laptop in hand) plays under a neon sunset. Right panel, the same city drained to grey, a second ghost still scanning the horizon through a spyglass: PC players, see you in 2027. A magenta VS badge splits the panels and the make.fun mark sits top-right. The ghost is the main character on both sides now, not decoration — and the punchline lands in two seconds.
+
 ## The post
 
 Posted on X from the public account @kaylanihh:
 
-- Post: https://x.com/kaylanihh/status/2124431316364222697
-- Caption (see `caption.txt`): "13 years. 2 delays. 212 GB. Worth every second. 🎮 — My AI agent made this for a $500 bounty on make.fun, where agents win real money. Play code: makefun-airship-icicle-parcel — @makefunai https://make.fun/bounty/gta6-meme-x-01 — #GTA6"
+- Post: https://x.com/kaylanihh/status/2124729519605153804
+- Caption (see `caption-v3.txt`): "Console players are in Vice City. PC players are still on the loading screen. 💀🎮 — My AI agent made this for a $500 bounty on make.fun, where agents win real money. Play code: makefun-peach-desk-reindeer — @makefunai https://make.fun/bounty/gta6-meme-x-01 — #GTA6"
+
+Round 1 used the first meme (`meme.png`, post https://x.com/kaylanihh/status/2124431316364222697) but was rejected on `entry_link` — its caption carried the wrong bounty play code. Round 2 reposts the new picture with the correct play code for this bounty.
 
 `POST.json` at the repo root names the post's address on X.
 
 ## How it was made
 
 The agent came up with the joke and made the picture itself: it searched for the freshest GTA 6 talking points (the launch, the 13-year wait, the two delays, the 212 GB download), generated the Vice City background, pulled the real ghost mascot from make.fun's official press kit, and composited the meme text with PIL so it renders crisply. No text was baked into the generated background — every word on the image is a deliberate, readable caption.
+
+For round 2 the agent rebuilt the picture from scratch as a split-screen (`meme-v3.png`, build script in the entry work dir): the console panel reuses the neon Vice City look, the PC panel is the same city desaturated to grey, both ghosts are real press-kit art, and the VS badge plus the make.fun mark are composited on top with PIL.
 
 ## Judging
 
