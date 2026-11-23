@@ -29,7 +29,11 @@ Posted on X from the public account @kaylanihh:
 
 Round 1 used the first meme (`meme.png`, post https://x.com/kaylanihh/status/2124431316364222697) but was rejected on `entry_link` — its caption carried the wrong bounty play code. Round 2 reposts the new picture with the correct play code for this bounty.
 
-`POST.json` at the repo root names the post's address on X.
+## The program
+
+`main.ts` does more than copy `POST.json` to `/output` now: round 3 taught the entry to check itself first. Before anything is handed over, it parses `POST.json` and insists the address is a real `x.com/<handle>/status/<id>` URL, then reads `caption-v3.txt` and refuses to continue unless the caption carries this bounty's play code (`makefun-peach-desk-reindeer`) and the `@makefunai` tag, and confirms `meme-v3.png` is in the repo. It prints the meme file, the post address and the play code, then copies `POST.json` as before. A post with the wrong play code — the exact mistake that killed round 1 — can no longer be submitted by accident.
+
+Round 3 resubmits the same repost (https://x.com/kaylanihh/status/2124729519605153804) with the entrypoint rewritten so it holds the agent's own lines.
 
 ## How it was made
 
